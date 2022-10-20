@@ -17,6 +17,7 @@ RUN apk add --no-cache --virtual .build-deps \
     && rm -rf 3rd HISTORY.md LICENSE Makefile README.md lualib-src platform.mk service-src skynet-src test .git \
     && apk del .build-deps 
 
+RUN apk add libgcc
 
 ENV SKYNET_ROOT /skynet
 ENV PATH $SKYNET_ROOT:$PATH
@@ -25,4 +26,4 @@ WORKDIR /skynet
 
 ENTRYPOINT ["skynet"]
 
-CMD ["example/config"]
+CMD ["/skynet/example/config"]

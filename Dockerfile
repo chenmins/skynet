@@ -26,4 +26,4 @@ WORKDIR /skynet
 
 ENTRYPOINT ["skynet"]
 
-CMD ["/skynet/example/config"]
+CMD ["/skynet/examples/config"]
